@@ -1,7 +1,7 @@
 # Django custom User
 
-A custom User on Django.  
-This repository can be used as a basic start for a project where a custom User based on the AbstractUser is necessary.  
+A custom User on Django (mostly extending and overriding the existing classes and methods).  
+This repository or the [`accounts`][accounts] application can be used as a basic start for a project where a custom User based on the AbstractUser is necessary.  
 
 
 ## Settings
@@ -50,7 +50,7 @@ from django.conf import settings
 User = settings.AUTH_USER_MODEL
 ```
 
-Which and when to use get_user_model vs AUTH_USER_MODEL? [Read here](link02).  
+Which and when to use can vary according to the context. Read [this SO post](link02) on get_user_model vs AUTH_USER_MODEL.  
 
 [accounts]: ./accounts/
 [settings.py]: ./django_custom_user/settings.py
