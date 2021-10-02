@@ -9,6 +9,7 @@ class User(AbstractUser):
     id = models.UUIDField(
         _("ID"), primary_key=True, default=uuid.uuid4, editable=False, unique=True
     )
+    email = models.EmailField(_("email address"), unique=True)
 
     class Meta:
         db_table = "auth_user"
