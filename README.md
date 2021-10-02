@@ -77,19 +77,21 @@ AUTHENTICATION_BACKENDS = [
 ]
 ```
 
-With this backends, the `email` field also has to be set to `unique` since there should not be more than one user with the same email address.
+With this backends, the `email` field also has to be set to `unique` since there should not be more than one user with the same email address. Update custom `User` model in [accounts/models.py][models.py].
 
 ```python
 email = models.EmailField(_('email address'), unique=True)
 ```
 
 If there are, `MultipleObjectsReturned` error will be raised when trying to get the `User` object.
+
 ![][image_001]
 
 <!-- File Links -->
 [accounts]: ./accounts/
 [settings.py]: ./django_custom_user/settings.py
 [backends.py]: ./accounts/backends.py
+[models.py]: ./accounts/models.py
 
 <!-- Image Links -->
 [image_001]: ./screenshots/image_001.png 
